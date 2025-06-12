@@ -50,3 +50,14 @@ Scripte einzeln aufrufen:
 ```bash
   ./scripts/get-letsencrypt.sh
 ```
+## Deployment
+Voraussetzungen:
+- Docker und Docker Compose muessen sowohl lokal als auch auf den Zielrechnern installiert sein.
+- SSH-Zugriff auf die Zielrechner.
+
+Das Skript `scripts/deploy.sh` uebertraegt ein selbstsigniertes Zertifikat und startet einen Nginx-Container per Docker Compose. Hosts werden als Argumente uebergeben:
+
+```bash
+./scripts/deploy.sh user@host1 user@host2
+```
+
